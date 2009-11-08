@@ -264,3 +264,22 @@ class TriangleMeshICP(object):
         return self.scale * numpy.dot(points, numpy.transpose(self.rotation)) \
             + self.translation
 
+
+
+class PointSetICP(object):
+    def __init__(self, source, target, \
+        max_iterations=200, tolerance=1e-5, rigid=True, \
+        match_centroids=True):
+        object.__init__(self)
+        self.source = source
+        self.target = target
+        self.max_iterations = max_iterations
+        self.tolerance = tolerance
+        self.rigid = rigid
+        self.match_centroids = match_centroids
+
+        self._compute()
+
+    def _compute(self):
+        # TODO
+        pass
