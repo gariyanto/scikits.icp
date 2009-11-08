@@ -46,8 +46,8 @@ if __name__ == '__main__':
           namespace_packages=['scikits'],
           packages=setuptools.find_packages(),
           include_package_data=True,
-          #zip_safe=False, # some tests need data files
-          zip_safe=True, # the package can run out of an .egg file
+          zip_safe=False, # some tests need data files
+          #zip_safe=True, # the package can run out of an .egg file
           classifiers=[
               'Development Status :: 1 - Planning',
               'Environment :: Console',
