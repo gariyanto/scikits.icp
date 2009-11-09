@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import tempfile
 
 from scikits.mesh import Mesh
 from scikits.icp import TriangleMeshICP
