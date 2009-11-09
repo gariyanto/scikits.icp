@@ -10,6 +10,7 @@ from scikits.icp.utils import data_dir
 def test_triangle_mesh_icp():
     source_file = os.path.join(data_dir(), 'wave1.off')
     target_file = os.path.join(data_dir(), 'wave2.off')
+    output_file = os.path.join(tempfile.gettempdir(), 'wave.off')
 
     source_mesh = Mesh(source_file)
     target_mesh = Mesh(target_file)
@@ -18,7 +19,7 @@ def test_triangle_mesh_icp():
 
     points = triangle_mesh_icp.transform(source_mesh.points)
     new_mesh = Mesh(points, source_mesh.indices)
-    new_mesh.write('/tmp/wave.off')
+    new_mesh.write(output_file)
 
 
 if __name__ == '__main__':
